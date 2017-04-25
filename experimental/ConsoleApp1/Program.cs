@@ -8,6 +8,7 @@ namespace ConsoleApp1
         {
             BitFields.Program.Run();
             TypeClassBits.Program.Run();
+            GenericBits.Program.Run();
         }
     }
 }
