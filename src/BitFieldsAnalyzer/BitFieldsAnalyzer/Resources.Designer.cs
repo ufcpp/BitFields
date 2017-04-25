@@ -73,33 +73,33 @@ namespace BitFieldsAnalyzer
         /// <summary>
         ///   Looks up a localized string similar to Type names should be all uppercase..
         /// </summary>
-        internal static string AnalyzerDescription
+        internal static string BitNAnalyzerDescription
         {
             get
             {
-                return ResourceManager.GetString("AnalyzerDescription", resourceCulture);
+                return ResourceManager.GetString("BitNAnalyzerDescription", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to Type name &apos;{0}&apos; contains lowercase letters.
         /// </summary>
-        internal static string AnalyzerMessageFormat
+        internal static string BitNAnalyzerMessageFormat
         {
             get
             {
-                return ResourceManager.GetString("AnalyzerMessageFormat", resourceCulture);
+                return ResourceManager.GetString("BitNAnalyzerMessageFormat", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to Type name contains lowercase letters.
         /// </summary>
-        internal static string AnalyzerTitle
+        internal static string BitNAnalyzerTitle
         {
             get
             {
-                return ResourceManager.GetString("AnalyzerTitle", resourceCulture);
+                return ResourceManager.GetString("BitNAnalyzerTitle", resourceCulture);
             }
         }
     }

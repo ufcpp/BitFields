@@ -22,7 +22,7 @@ namespace BitFieldsAnalyzer
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
-            get { return ImmutableArray.Create(BitFieldsAnalyzerAnalyzer.DiagnosticId); }
+            get { return ImmutableArray.Create(BitNAnalyzer.DiagnosticId); }
         }
 
         public sealed override FixAllProvider GetFixAllProvider()
