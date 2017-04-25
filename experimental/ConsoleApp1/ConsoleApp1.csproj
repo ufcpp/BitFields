@@ -14,7 +14,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.3.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\BitFields\BitFields.csproj" />
+    <ProjectReference Include="..\GenericBits\GenericBits.csproj" />
+    <ProjectReference Include="..\TypeClassBits\TypeClassBits.csproj" />
   </ItemGroup>
 
 </Project>
