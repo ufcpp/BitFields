@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36A89821-EC52-4181-B9AE-29ECE656397E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitFields", "src\BitFields\BitFields.csproj", "{C19FE8B5-D129-45DD-A695-BCEC62BAFF49}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "experimental", "experimental", "{BB961ACF-FF36-4F16-8C0F-8BC5E6BDDF84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitFields", "src\BitFields\BitFields.csproj", "{C19FE8B5-D129-45DD-A695-BCEC62BAFF49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "experimental\ConsoleApp1\ConsoleApp1.csproj", "{363F4419-1E1D-4760-80FA-26FE7F332C6C}"
 EndProject
@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBits", "experimental
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeClassBits", "experimental\TypeClassBits\TypeClassBits.csproj", "{50A4BC0C-EF7B-420D-8AE0-CDE0851F0424}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitFieldsAnalyzer", "src\BitFieldsAnalyzer\BitFieldsAnalyzer\BitFieldsAnalyzer.csproj", "{EE4CFF3F-5F05-44B6-A12D-AB0BA23D1BF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitFieldsAnalyzer", "src\BitFieldsAnalyzer\BitFieldsAnalyzer\BitFieldsAnalyzer.csproj", "{EE4CFF3F-5F05-44B6-A12D-AB0BA23D1BF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitFieldsAnalyzer.Test", "src\BitFieldsAnalyzer\BitFieldsAnalyzer.Test\BitFieldsAnalyzer.Test.csproj", "{BB2F0E80-A4AF-47C5-84DC-D10B6180403F}"
 EndProject
