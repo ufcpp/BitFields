@@ -21,12 +21,16 @@ for (var i = 1; i <= 64; i++)
     public struct Bit<#= i #> : IEquatable<Bit<#= i #>>
     {
         public <#= baseType #> Value;
+        public Bit<#= i #> (<#= baseType #>  x) => Value = x;
 
         public bool Equals(Bit<#= i #> other) => Value == other.Value;
         public override bool Equals(object obj) => obj is Bit<#= i #> other && Equals(other);
         public override int GetHashCode() => Value.GetHashCode();
         public static bool operator ==(Bit<#= i #> x, Bit<#= i #> y) => x.Value == y.Value;
         public static bool operator !=(Bit<#= i #> x, Bit<#= i #> y) => x.Value != y.Value;
+
+        public static implicit operator Bit<#= i #>(<#= baseType #> x) => new Bit<#= i #>(x);
+        public static implicit operator <#= baseType #>(Bit<#= i #> x) => x.Value;
     }
 <#
 }
