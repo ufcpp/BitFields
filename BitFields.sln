@@ -5,15 +5,21 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36A89821-EC52-4181-B9AE-29ECE656397E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitFields", "src\BitFields\BitFields.csproj", "{C19FE8B5-D129-45DD-A695-BCEC62BAFF49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitFields", "src\BitFields\BitFields.csproj", "{C19FE8B5-D129-45DD-A695-BCEC62BAFF49}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "experimental", "experimental", "{BB961ACF-FF36-4F16-8C0F-8BC5E6BDDF84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "experimental\ConsoleApp1\ConsoleApp1.csproj", "{363F4419-1E1D-4760-80FA-26FE7F332C6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "experimental\ConsoleApp1\ConsoleApp1.csproj", "{363F4419-1E1D-4760-80FA-26FE7F332C6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBits", "experimental\GenericBits\GenericBits.csproj", "{1991D425-2FF4-4D0C-8453-BC9B89005F99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBits", "experimental\GenericBits\GenericBits.csproj", "{1991D425-2FF4-4D0C-8453-BC9B89005F99}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeClassBits", "experimental\TypeClassBits\TypeClassBits.csproj", "{50A4BC0C-EF7B-420D-8AE0-CDE0851F0424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitFieldsAnalyzer", "src\BitFieldsAnalyzer\BitFieldsAnalyzer\BitFieldsAnalyzer.csproj", "{EE4CFF3F-5F05-44B6-A12D-AB0BA23D1BF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitFieldsAnalyzer.Test", "src\BitFieldsAnalyzer\BitFieldsAnalyzer.Test\BitFieldsAnalyzer.Test.csproj", "{BB2F0E80-A4AF-47C5-84DC-D10B6180403F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitFieldsAnalyzer.Vsix", "src\BitFieldsAnalyzer\BitFieldsAnalyzer.Vsix\BitFieldsAnalyzer.Vsix.csproj", "{5106E44E-D56B-4654-8D6A-9F6B782DB09D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +43,18 @@ Global
 		{50A4BC0C-EF7B-420D-8AE0-CDE0851F0424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50A4BC0C-EF7B-420D-8AE0-CDE0851F0424}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50A4BC0C-EF7B-420D-8AE0-CDE0851F0424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4CFF3F-5F05-44B6-A12D-AB0BA23D1BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4CFF3F-5F05-44B6-A12D-AB0BA23D1BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4CFF3F-5F05-44B6-A12D-AB0BA23D1BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4CFF3F-5F05-44B6-A12D-AB0BA23D1BF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB2F0E80-A4AF-47C5-84DC-D10B6180403F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2F0E80-A4AF-47C5-84DC-D10B6180403F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2F0E80-A4AF-47C5-84DC-D10B6180403F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2F0E80-A4AF-47C5-84DC-D10B6180403F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5106E44E-D56B-4654-8D6A-9F6B782DB09D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5106E44E-D56B-4654-8D6A-9F6B782DB09D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5106E44E-D56B-4654-8D6A-9F6B782DB09D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5106E44E-D56B-4654-8D6A-9F6B782DB09D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +64,8 @@ Global
 		{363F4419-1E1D-4760-80FA-26FE7F332C6C} = {BB961ACF-FF36-4F16-8C0F-8BC5E6BDDF84}
 		{1991D425-2FF4-4D0C-8453-BC9B89005F99} = {BB961ACF-FF36-4F16-8C0F-8BC5E6BDDF84}
 		{50A4BC0C-EF7B-420D-8AE0-CDE0851F0424} = {BB961ACF-FF36-4F16-8C0F-8BC5E6BDDF84}
+		{EE4CFF3F-5F05-44B6-A12D-AB0BA23D1BF1} = {36A89821-EC52-4181-B9AE-29ECE656397E}
+		{BB2F0E80-A4AF-47C5-84DC-D10B6180403F} = {36A89821-EC52-4181-B9AE-29ECE656397E}
+		{5106E44E-D56B-4654-8D6A-9F6B782DB09D} = {36A89821-EC52-4181-B9AE-29ECE656397E}
 	EndGlobalSection
 EndGlobal
