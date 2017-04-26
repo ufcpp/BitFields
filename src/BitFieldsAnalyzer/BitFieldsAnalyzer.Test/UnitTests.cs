@@ -5,10 +5,13 @@ using System;
 using TestHelper;
 using BitFieldsAnalyzer;
 using Xunit;
+using System.Collections.Generic;
+using Microsoft.CodeAnalysis.CodeActions;
+using System.Threading;
 
 namespace BitFieldsAnalyzer.Test
 {
-    public class UnitTest : CodeFixVerifier
+    public class UnitTest : DiagnosticVerifier
     {
         [Fact]
         public void TestMethod0()
@@ -128,11 +131,6 @@ internal struct Bit19 { public static implicit operator Bit19(int x) => default(
         }
 
 #endif
-        protected override CodeFixProvider GetCSharpCodeFixProvider()
-        {
-            return new BitFieldsAnalyzerCodeFixProvider();
-        }
-
         protected override DiagnosticAnalyzer GetCSharpDiagnosticAnalyzer()
         {
             return new BitNAnalyzer();

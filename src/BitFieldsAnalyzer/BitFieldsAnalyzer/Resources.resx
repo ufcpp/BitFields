@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BitFieldGeneratorDescription" xml:space="preserve">
+    <value>You can generate bit-fields.</value>
+  </data>
+  <data name="BitFieldGeneratorMessageFormat" xml:space="preserve">
+    <value>You can generate bit-fields on '{0}'.</value>
+  </data>
+  <data name="BitFieldGeneratorTitle" xml:space="preserve">
+    <value>Bit field generation</value>
+  </data>
   <data name="BitNAnalyzerDescription" xml:space="preserve">
     <value>An attempt was made to assign a value to a variable whose type cannot store the value.</value>
     <comment>An optional longer localizable description of the diagnostic.</comment>

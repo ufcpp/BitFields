@@ -102,5 +102,35 @@ namespace BitFieldsAnalyzer
                 return ResourceManager.GetString("BitNAnalyzerTitle", resourceCulture);
             }
         }
+
+        /// <summary>
+        /// </summary>
+        internal static string BitFieldGeneratorAnalyzerDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("BitFieldGeneratorAnalyzerDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        /// </summary>
+        internal static string BitFieldGeneratorAnalyzerMessageFormat
+        {
+            get
+            {
+                return ResourceManager.GetString("BitFieldGeneratorAnalyzerMessageFormat", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        /// </summary>
+        internal static string BitFieldGeneratorAnalyzerTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("BitFieldGeneratorAnalyzerTitle", resourceCulture);
+            }
+        }
     }
 }
