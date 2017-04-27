@@ -139,17 +139,17 @@ namespace BitFieldsAnalyzer
                 .WithAdditionalAnnotations(Formatter.Annotation)
                 ;
 
-            var postfix = fieldType == "long" ? "UL" : "U";
+            var postfix = fieldType == "ulong" ? "UL" : "U";
 
             foreach (var (name, start, end, bits) in bitfields)
             {
                 var childNodes = CSharpSyntaxTree.ParseText(
                 $@"        private const int {name}Shift = {start};
-        private const {fieldType} {name}Mask = unchecked((1{postfix} << {end}) - (1{postfix} << {start}));
+        private const {fieldType} {name}Mask = unchecked(({fieldType})((1{postfix} << {end}) - (1{postfix} << {start})));
         public Bit{bits} {name}
         {{
             get => (Bit{bits})((Value & {name}Mask) >> {name}Shift);
-            set => Value = (Value & ~{name}Mask) | (((({fieldType})value) << {name}Shift) & {name}Mask);
+            set => Value = unchecked(({fieldType})((Value & ~{name}Mask) | (((({fieldType})value) << {name}Shift) & {name}Mask)));
         }}
 ")
                 .GetRoot().ChildNodes()
