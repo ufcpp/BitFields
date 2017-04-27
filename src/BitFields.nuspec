@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>BitFields</id>
+    <version>0.1.0</version>
+    <title>BitFields</title>
+    <authors>Nobuyuki Iwanaga</authors>
+    <owners>Nobuyuki Iwanaga</owners>
+    <licenseUrl>https://github.com/ufcpp/BitFields/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ufcpp/BitFields</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Source Code Generator for BitFields structs.</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Nobuyuki Iwanaga</copyright>
+    <tags>BitFields, code generator</tags>
+  </metadata>
+  <files>
+    <file src="BitFields\bin\Debug\**\*" target="lib" exclude="**\*.json" />
+    <file src="BitFieldsAnalyzer\BitFieldsAnalyzer\bin\Debug\netstandard1.4\*.dll" target="analyzers\C#" exclude="**\*.json" />
+  </files>
+</package>

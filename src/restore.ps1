@@ -1,0 +1,1 @@
+Invoke-WebRequest http://nuget.org/nuget.exe -OutFile nuget.exe
