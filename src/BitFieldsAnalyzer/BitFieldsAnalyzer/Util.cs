@@ -52,6 +52,15 @@ namespace BitFieldsAnalyzer
             return 32 - 1054 + (int)(u.Ulong >> 52);
         }
 
+        public static string GetCapableType(int bits)
+        {
+            if (bits <= 8) return "byte";
+            if (bits <= 16) return "ushort";
+            if (bits <= 32) return "uint";
+            if (bits <= 64) return "ulong";
+            throw new IndexOutOfRangeException();
+        }
+
         public static ulong GetNumber(object obj)
         {
             switch (obj)

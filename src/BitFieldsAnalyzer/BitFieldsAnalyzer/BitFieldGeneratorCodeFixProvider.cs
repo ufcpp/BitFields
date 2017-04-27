@@ -10,6 +10,9 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Rename;
 using Microsoft.CodeAnalysis.Formatting;
+using System;
+using System.Collections.Generic;
+using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace BitFieldsAnalyzer
 {
@@ -63,13 +66,9 @@ namespace BitFieldsAnalyzer
 
         private static async Task<Document> AddNewDocument(Document document, StructDeclarationSyntax typeDecl, CancellationToken cancellationToken)
         {
-            var definition = typeDecl.ChildNodes().OfType<EnumDeclarationSyntax>().FirstOrDefault(n => n.Identifier.Text == "BitFields");
+            var newRoot = await GeneratePartialDeclaration(document, typeDecl, cancellationToken);
 
-            //var newRoot = await GeneratePartialDeclaration(document, typeDecl, cancellationToken);
-            var newRoot = SyntaxFactory.CompilationUnit();
-            newRoot = newRoot.WithLeadingTrivia(
-                SyntaxFactory.Comment("// " + string.Join(", ", definition.Members.Select(x => x.Identifier.Text + "/" + x.EqualsValue.Value.GetText())))
-                );
+            var xxx = newRoot.ToString();
 
             var name = typeDecl.Identifier.Text;
             var generatedName = name + ".BitFields.cs";
@@ -79,6 +78,89 @@ namespace BitFieldsAnalyzer
             var existed = project.Documents.FirstOrDefault(d => d.Name == generatedName);
             if (existed != null) return existed.WithSyntaxRoot(newRoot);
             else return project.AddDocument(generatedName, newRoot, document.Folders);
+        }
+
+        private static async Task<CompilationUnitSyntax> GeneratePartialDeclaration(Document document, StructDeclarationSyntax typeDecl, CancellationToken cancellationToken)
+        {
+            var definition = typeDecl.ChildNodes().OfType<EnumDeclarationSyntax>().FirstOrDefault(n => n.Identifier.Text == "BitFields");
+            var bitfields = BitField.Create(f()).ToArray();
+
+            IEnumerable<(string name, int bits)> f()
+            {
+                foreach (var m in definition.Members)
+                {
+                    if (m.EqualsValue.Value is LiteralExpressionSyntax literal)
+                    {
+                        yield return (m.Identifier.Text, (int)Util.GetNumber(literal.Token.Value));
+                    }
+                }
+            }
+
+            var generatedNodes = GenerateMemberDeclarations(bitfields).ToArray();
+
+            var newTypeDecl = typeDecl.GetPartialTypeDelaration()
+                .AddMembers(generatedNodes)
+                .WithAdditionalAnnotations(Formatter.Annotation);
+
+            var ns = typeDecl.FirstAncestorOrSelf<NamespaceDeclarationSyntax>()?.Name.WithoutTrivia().GetText().ToString();
+
+            MemberDeclarationSyntax topDecl;
+            if (ns != null)
+            {
+                topDecl = NamespaceDeclaration(IdentifierName(ns))
+                    .AddMembers(newTypeDecl)
+                    .WithAdditionalAnnotations(Formatter.Annotation);
+            }
+            else
+            {
+                topDecl = newTypeDecl;
+            }
+
+            var root = await document.GetSyntaxRootAsync(cancellationToken).ConfigureAwait(false) as CompilationUnitSyntax;
+
+            return CompilationUnit()
+                .AddUsings(UsingDirective(IdentifierName("BitFields")).WithTrailingTrivia(CarriageReturnLineFeed))
+                .AddMembers(topDecl)
+                .WithTrailingTrivia(CarriageReturnLineFeed)
+                .WithAdditionalAnnotations(Formatter.Annotation);
+        }
+
+        private static IEnumerable<MemberDeclarationSyntax> GenerateMemberDeclarations(BitField[] bitfields)
+        {
+            var totalBits = bitfields.Last().EndBit;
+            var fieldType = Util.GetCapableType(totalBits);
+
+            yield return CSharpSyntaxTree.ParseText(
+            $@"        public {fieldType} Value;
+").GetRoot().ChildNodes()
+                .OfType<MemberDeclarationSyntax>()
+                .First()
+                .WithTrailingTrivia(CarriageReturnLineFeed, CarriageReturnLineFeed)
+                .WithAdditionalAnnotations(Formatter.Annotation)
+                ;
+
+            var postfix = fieldType == "long" ? "UL" : "U";
+
+            foreach (var (name, start, end, bits) in bitfields)
+            {
+                var childNodes = CSharpSyntaxTree.ParseText(
+                $@"        private const int {name}Shift = {start};
+        private const {fieldType} {name}Mask = unchecked((1{postfix} << {end}) - (1{postfix} << {start}));
+        public Bit{bits} {name}
+        {{
+            get => (Bit{bits})((Value & {name}Mask) >> {name}Shift);
+            set => Value = (Value & ~{name}Mask) | (((({fieldType})value) << {name}Shift) & {name}Mask);
+        }}
+")
+                .GetRoot().ChildNodes()
+                .OfType<MemberDeclarationSyntax>()
+                .Select(n => n
+                    .WithTrailingTrivia(CarriageReturnLineFeed)
+                    .WithAdditionalAnnotations(Formatter.Annotation)
+                    );
+
+                foreach (var n in childNodes) yield return n;
+            }
         }
     }
 }

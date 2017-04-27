@@ -18,7 +18,7 @@ namespace BitFieldsAnalyzer
 
         public static StructDeclarationSyntax GetPartialTypeDelaration(this StructDeclarationSyntax typeDecl)
             => CSharpSyntaxTree.ParseText($@"
-partial class {typeDecl.Identifier.Text}
+partial struct {typeDecl.Identifier.Text}
 {{
 }}
 ").GetRoot().ChildNodes().OfType<StructDeclarationSyntax>().First();
