@@ -15,6 +15,8 @@ namespace BitFields
 
         public static implicit operator Bit1(byte x) => new Bit1(x);
         public static implicit operator byte(Bit1 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit2 : IEquatable<Bit2>
     {
@@ -29,6 +31,8 @@ namespace BitFields
 
         public static implicit operator Bit2(byte x) => new Bit2(x);
         public static implicit operator byte(Bit2 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit3 : IEquatable<Bit3>
     {
@@ -43,6 +47,8 @@ namespace BitFields
 
         public static implicit operator Bit3(byte x) => new Bit3(x);
         public static implicit operator byte(Bit3 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit4 : IEquatable<Bit4>
     {
@@ -57,6 +63,8 @@ namespace BitFields
 
         public static implicit operator Bit4(byte x) => new Bit4(x);
         public static implicit operator byte(Bit4 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit5 : IEquatable<Bit5>
     {
@@ -71,6 +79,8 @@ namespace BitFields
 
         public static implicit operator Bit5(byte x) => new Bit5(x);
         public static implicit operator byte(Bit5 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit6 : IEquatable<Bit6>
     {
@@ -85,6 +95,8 @@ namespace BitFields
 
         public static implicit operator Bit6(byte x) => new Bit6(x);
         public static implicit operator byte(Bit6 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit7 : IEquatable<Bit7>
     {
@@ -99,6 +111,8 @@ namespace BitFields
 
         public static implicit operator Bit7(byte x) => new Bit7(x);
         public static implicit operator byte(Bit7 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit8 : IEquatable<Bit8>
     {
@@ -113,6 +127,8 @@ namespace BitFields
 
         public static implicit operator Bit8(byte x) => new Bit8(x);
         public static implicit operator byte(Bit8 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit9 : IEquatable<Bit9>
     {
@@ -127,6 +143,8 @@ namespace BitFields
 
         public static implicit operator Bit9(ushort x) => new Bit9(x);
         public static implicit operator ushort(Bit9 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit10 : IEquatable<Bit10>
     {
@@ -141,6 +159,8 @@ namespace BitFields
 
         public static implicit operator Bit10(ushort x) => new Bit10(x);
         public static implicit operator ushort(Bit10 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit11 : IEquatable<Bit11>
     {
@@ -155,6 +175,8 @@ namespace BitFields
 
         public static implicit operator Bit11(ushort x) => new Bit11(x);
         public static implicit operator ushort(Bit11 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit12 : IEquatable<Bit12>
     {
@@ -169,6 +191,8 @@ namespace BitFields
 
         public static implicit operator Bit12(ushort x) => new Bit12(x);
         public static implicit operator ushort(Bit12 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit13 : IEquatable<Bit13>
     {
@@ -183,6 +207,8 @@ namespace BitFields
 
         public static implicit operator Bit13(ushort x) => new Bit13(x);
         public static implicit operator ushort(Bit13 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit14 : IEquatable<Bit14>
     {
@@ -197,6 +223,8 @@ namespace BitFields
 
         public static implicit operator Bit14(ushort x) => new Bit14(x);
         public static implicit operator ushort(Bit14 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit15 : IEquatable<Bit15>
     {
@@ -211,6 +239,8 @@ namespace BitFields
 
         public static implicit operator Bit15(ushort x) => new Bit15(x);
         public static implicit operator ushort(Bit15 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit16 : IEquatable<Bit16>
     {
@@ -225,6 +255,8 @@ namespace BitFields
 
         public static implicit operator Bit16(ushort x) => new Bit16(x);
         public static implicit operator ushort(Bit16 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit17 : IEquatable<Bit17>
     {
@@ -239,6 +271,8 @@ namespace BitFields
 
         public static implicit operator Bit17(uint x) => new Bit17(x);
         public static implicit operator uint(Bit17 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit18 : IEquatable<Bit18>
     {
@@ -253,6 +287,8 @@ namespace BitFields
 
         public static implicit operator Bit18(uint x) => new Bit18(x);
         public static implicit operator uint(Bit18 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit19 : IEquatable<Bit19>
     {
@@ -267,6 +303,8 @@ namespace BitFields
 
         public static implicit operator Bit19(uint x) => new Bit19(x);
         public static implicit operator uint(Bit19 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit20 : IEquatable<Bit20>
     {
@@ -281,6 +319,8 @@ namespace BitFields
 
         public static implicit operator Bit20(uint x) => new Bit20(x);
         public static implicit operator uint(Bit20 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit21 : IEquatable<Bit21>
     {
@@ -295,6 +335,8 @@ namespace BitFields
 
         public static implicit operator Bit21(uint x) => new Bit21(x);
         public static implicit operator uint(Bit21 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit22 : IEquatable<Bit22>
     {
@@ -309,6 +351,8 @@ namespace BitFields
 
         public static implicit operator Bit22(uint x) => new Bit22(x);
         public static implicit operator uint(Bit22 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit23 : IEquatable<Bit23>
     {
@@ -323,6 +367,8 @@ namespace BitFields
 
         public static implicit operator Bit23(uint x) => new Bit23(x);
         public static implicit operator uint(Bit23 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit24 : IEquatable<Bit24>
     {
@@ -337,6 +383,8 @@ namespace BitFields
 
         public static implicit operator Bit24(uint x) => new Bit24(x);
         public static implicit operator uint(Bit24 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit25 : IEquatable<Bit25>
     {
@@ -351,6 +399,8 @@ namespace BitFields
 
         public static implicit operator Bit25(uint x) => new Bit25(x);
         public static implicit operator uint(Bit25 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit26 : IEquatable<Bit26>
     {
@@ -365,6 +415,8 @@ namespace BitFields
 
         public static implicit operator Bit26(uint x) => new Bit26(x);
         public static implicit operator uint(Bit26 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit27 : IEquatable<Bit27>
     {
@@ -379,6 +431,8 @@ namespace BitFields
 
         public static implicit operator Bit27(uint x) => new Bit27(x);
         public static implicit operator uint(Bit27 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit28 : IEquatable<Bit28>
     {
@@ -393,6 +447,8 @@ namespace BitFields
 
         public static implicit operator Bit28(uint x) => new Bit28(x);
         public static implicit operator uint(Bit28 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit29 : IEquatable<Bit29>
     {
@@ -407,6 +463,8 @@ namespace BitFields
 
         public static implicit operator Bit29(uint x) => new Bit29(x);
         public static implicit operator uint(Bit29 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit30 : IEquatable<Bit30>
     {
@@ -421,6 +479,8 @@ namespace BitFields
 
         public static implicit operator Bit30(uint x) => new Bit30(x);
         public static implicit operator uint(Bit30 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit31 : IEquatable<Bit31>
     {
@@ -435,6 +495,8 @@ namespace BitFields
 
         public static implicit operator Bit31(uint x) => new Bit31(x);
         public static implicit operator uint(Bit31 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit32 : IEquatable<Bit32>
     {
@@ -449,6 +511,8 @@ namespace BitFields
 
         public static implicit operator Bit32(uint x) => new Bit32(x);
         public static implicit operator uint(Bit32 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit33 : IEquatable<Bit33>
     {
@@ -463,6 +527,8 @@ namespace BitFields
 
         public static implicit operator Bit33(ulong x) => new Bit33(x);
         public static implicit operator ulong(Bit33 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit34 : IEquatable<Bit34>
     {
@@ -477,6 +543,8 @@ namespace BitFields
 
         public static implicit operator Bit34(ulong x) => new Bit34(x);
         public static implicit operator ulong(Bit34 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit35 : IEquatable<Bit35>
     {
@@ -491,6 +559,8 @@ namespace BitFields
 
         public static implicit operator Bit35(ulong x) => new Bit35(x);
         public static implicit operator ulong(Bit35 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit36 : IEquatable<Bit36>
     {
@@ -505,6 +575,8 @@ namespace BitFields
 
         public static implicit operator Bit36(ulong x) => new Bit36(x);
         public static implicit operator ulong(Bit36 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit37 : IEquatable<Bit37>
     {
@@ -519,6 +591,8 @@ namespace BitFields
 
         public static implicit operator Bit37(ulong x) => new Bit37(x);
         public static implicit operator ulong(Bit37 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit38 : IEquatable<Bit38>
     {
@@ -533,6 +607,8 @@ namespace BitFields
 
         public static implicit operator Bit38(ulong x) => new Bit38(x);
         public static implicit operator ulong(Bit38 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit39 : IEquatable<Bit39>
     {
@@ -547,6 +623,8 @@ namespace BitFields
 
         public static implicit operator Bit39(ulong x) => new Bit39(x);
         public static implicit operator ulong(Bit39 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit40 : IEquatable<Bit40>
     {
@@ -561,6 +639,8 @@ namespace BitFields
 
         public static implicit operator Bit40(ulong x) => new Bit40(x);
         public static implicit operator ulong(Bit40 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit41 : IEquatable<Bit41>
     {
@@ -575,6 +655,8 @@ namespace BitFields
 
         public static implicit operator Bit41(ulong x) => new Bit41(x);
         public static implicit operator ulong(Bit41 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit42 : IEquatable<Bit42>
     {
@@ -589,6 +671,8 @@ namespace BitFields
 
         public static implicit operator Bit42(ulong x) => new Bit42(x);
         public static implicit operator ulong(Bit42 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit43 : IEquatable<Bit43>
     {
@@ -603,6 +687,8 @@ namespace BitFields
 
         public static implicit operator Bit43(ulong x) => new Bit43(x);
         public static implicit operator ulong(Bit43 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit44 : IEquatable<Bit44>
     {
@@ -617,6 +703,8 @@ namespace BitFields
 
         public static implicit operator Bit44(ulong x) => new Bit44(x);
         public static implicit operator ulong(Bit44 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit45 : IEquatable<Bit45>
     {
@@ -631,6 +719,8 @@ namespace BitFields
 
         public static implicit operator Bit45(ulong x) => new Bit45(x);
         public static implicit operator ulong(Bit45 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit46 : IEquatable<Bit46>
     {
@@ -645,6 +735,8 @@ namespace BitFields
 
         public static implicit operator Bit46(ulong x) => new Bit46(x);
         public static implicit operator ulong(Bit46 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit47 : IEquatable<Bit47>
     {
@@ -659,6 +751,8 @@ namespace BitFields
 
         public static implicit operator Bit47(ulong x) => new Bit47(x);
         public static implicit operator ulong(Bit47 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit48 : IEquatable<Bit48>
     {
@@ -673,6 +767,8 @@ namespace BitFields
 
         public static implicit operator Bit48(ulong x) => new Bit48(x);
         public static implicit operator ulong(Bit48 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit49 : IEquatable<Bit49>
     {
@@ -687,6 +783,8 @@ namespace BitFields
 
         public static implicit operator Bit49(ulong x) => new Bit49(x);
         public static implicit operator ulong(Bit49 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit50 : IEquatable<Bit50>
     {
@@ -701,6 +799,8 @@ namespace BitFields
 
         public static implicit operator Bit50(ulong x) => new Bit50(x);
         public static implicit operator ulong(Bit50 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit51 : IEquatable<Bit51>
     {
@@ -715,6 +815,8 @@ namespace BitFields
 
         public static implicit operator Bit51(ulong x) => new Bit51(x);
         public static implicit operator ulong(Bit51 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit52 : IEquatable<Bit52>
     {
@@ -729,6 +831,8 @@ namespace BitFields
 
         public static implicit operator Bit52(ulong x) => new Bit52(x);
         public static implicit operator ulong(Bit52 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit53 : IEquatable<Bit53>
     {
@@ -743,6 +847,8 @@ namespace BitFields
 
         public static implicit operator Bit53(ulong x) => new Bit53(x);
         public static implicit operator ulong(Bit53 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit54 : IEquatable<Bit54>
     {
@@ -757,6 +863,8 @@ namespace BitFields
 
         public static implicit operator Bit54(ulong x) => new Bit54(x);
         public static implicit operator ulong(Bit54 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit55 : IEquatable<Bit55>
     {
@@ -771,6 +879,8 @@ namespace BitFields
 
         public static implicit operator Bit55(ulong x) => new Bit55(x);
         public static implicit operator ulong(Bit55 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit56 : IEquatable<Bit56>
     {
@@ -785,6 +895,8 @@ namespace BitFields
 
         public static implicit operator Bit56(ulong x) => new Bit56(x);
         public static implicit operator ulong(Bit56 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit57 : IEquatable<Bit57>
     {
@@ -799,6 +911,8 @@ namespace BitFields
 
         public static implicit operator Bit57(ulong x) => new Bit57(x);
         public static implicit operator ulong(Bit57 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit58 : IEquatable<Bit58>
     {
@@ -813,6 +927,8 @@ namespace BitFields
 
         public static implicit operator Bit58(ulong x) => new Bit58(x);
         public static implicit operator ulong(Bit58 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit59 : IEquatable<Bit59>
     {
@@ -827,6 +943,8 @@ namespace BitFields
 
         public static implicit operator Bit59(ulong x) => new Bit59(x);
         public static implicit operator ulong(Bit59 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit60 : IEquatable<Bit60>
     {
@@ -841,6 +959,8 @@ namespace BitFields
 
         public static implicit operator Bit60(ulong x) => new Bit60(x);
         public static implicit operator ulong(Bit60 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit61 : IEquatable<Bit61>
     {
@@ -855,6 +975,8 @@ namespace BitFields
 
         public static implicit operator Bit61(ulong x) => new Bit61(x);
         public static implicit operator ulong(Bit61 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit62 : IEquatable<Bit62>
     {
@@ -869,6 +991,8 @@ namespace BitFields
 
         public static implicit operator Bit62(ulong x) => new Bit62(x);
         public static implicit operator ulong(Bit62 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit63 : IEquatable<Bit63>
     {
@@ -883,6 +1007,8 @@ namespace BitFields
 
         public static implicit operator Bit63(ulong x) => new Bit63(x);
         public static implicit operator ulong(Bit63 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
     public struct Bit64 : IEquatable<Bit64>
     {
@@ -897,5 +1023,7 @@ namespace BitFields
 
         public static implicit operator Bit64(ulong x) => new Bit64(x);
         public static implicit operator ulong(Bit64 x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
 }

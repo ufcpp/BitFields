@@ -31,6 +31,8 @@ for (var i = 1; i <= 64; i++)
 
         public static implicit operator Bit<#= i #>(<#= baseType #> x) => new Bit<#= i #>(x);
         public static implicit operator <#= baseType #>(Bit<#= i #> x) => x.Value;
+
+        public override string ToString() => Value.ToString();
     }
 <#
 }
